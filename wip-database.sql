@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS airports (
 );
 
 CREATE TABLE IF NOT EXISTS flights (
-    flight_id CHAR(8),
+    flight_id VARCHAR(7),
     start_time TIMESTAMP,
     end_time TIMESTAMP,
     airplane_id CHAR(10),
