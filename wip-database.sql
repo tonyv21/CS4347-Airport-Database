@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS airplanes (
 
 CREATE TABLE IF NOT EXISTS airlines (
     airline_id CHAR(6) PRIMARY KEY,
-    name VARCHAR(100),
+    airline_name VARCHAR(100),
     num_employees INTEGER CHECK (num_employees >= 0),
     num_planes INTEGER CHECK (num_planes >= 0)
 );
@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS airlines (
 
 CREATE TABLE IF NOT EXISTS airports (
     airport_id CHAR(3) PRIMARY KEY,
-    name VARCHAR(100),
+    airport_name VARCHAR(100),
     state CHAR(2),
     city VARCHAR(100),
     latitude DECIMAL(9, 6),
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS passengers (
     fname VARCHAR(50),
     lname VARCHAR(50),
     midInit CHAR(1),
-    flight_id CHAR(8),
+    flight_id VARCHAR(7),
     FOREIGN KEY (flight_id) REFERENCES flights (flight_id)
 );
 
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS employees (
     employee_id CHAR(10),
     airline_id CHAR(6),
     salary REAL CHECK (salary > 0),
-    type VARCHAR(50),
+    etype VARCHAR(50),
     fname VARCHAR(50),
     lname VARCHAR(50),
     midInit CHAR(1),
