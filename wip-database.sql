@@ -1,3 +1,10 @@
+CREATE TABLE IF NOT EXISTS airlines (
+    airline_id CHAR(6) PRIMARY KEY,
+    airline_name VARCHAR(100),
+    num_employees INTEGER CHECK (num_employees >= 0),
+    num_planes INTEGER CHECK (num_planes >= 0)
+);
+
 CREATE TABLE IF NOT EXISTS airplanes (
     plane_id CHAR(10),
     plane_type VARCHAR(50),
@@ -8,14 +15,6 @@ CREATE TABLE IF NOT EXISTS airplanes (
     FOREIGN KEY (airline_id) REFERENCES airlines (airline_id),
     PRIMARY KEY (plane_id, plane_type)
 );
-
-CREATE TABLE IF NOT EXISTS airlines (
-    airline_id CHAR(6) PRIMARY KEY,
-    airline_name VARCHAR(100),
-    num_employees INTEGER CHECK (num_employees >= 0),
-    num_planes INTEGER CHECK (num_planes >= 0)
-);
-
 
 CREATE TABLE IF NOT EXISTS airports (
     airport_id CHAR(3) PRIMARY KEY,
