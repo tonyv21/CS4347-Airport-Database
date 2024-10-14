@@ -10,6 +10,6 @@ INSERT INTO airlines (airline_id, name, num_employees, num_planes) VALUES ('B6',
 INSERT INTO airlines (airline_id, name, num_employees, num_planes) VALUES ('ENY', 'Envoy Air', 15000, 700);
 INSERT INTO airlines (airline_id, name, num_employees, num_planes) VALUES ('MQ', 'American Eagle Airlines', 14000, 600);
 INSERT INTO airlines (airline_id, name, num_employees, num_planes) VALUES ('OO', 'SkyWest', 14000, 500);
-INSERT INTO airlines (airline_id, name, num_employees, num_planes) VALUES ('PI', 'Piedmont Airlines (1948-1989)', 10000, 150);
+INSERT INTO airlines (airline_id, name, num_employees, num_planes) VALUES ('PI', 'Piedmont Airlines', 10000, 150);
 INSERT INTO airlines (airline_id, name, num_employees, num_planes) VALUES ('XE', 'ExpressJet', 9000, 400);
 INSERT INTO airlines (airline_id, name, num_employees, num_planes) VALUES ('NK', 'Spirit Airlines', 7500, 150);
