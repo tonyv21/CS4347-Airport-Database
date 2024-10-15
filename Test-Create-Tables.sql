@@ -1,4 +1,3 @@
-/*
 CREATE TABLE airlines (
     airline_id CHAR(6) PRIMARY KEY,
     airline_name VARCHAR(100),
@@ -51,7 +50,6 @@ CREATE TABLE passengers (
     flight_id VARCHAR(7),
     FOREIGN KEY (flight_id) REFERENCES flights (flight_id)
 );
-
 CREATE TABLE employees (
     employee_id CHAR(10),
     airline_id CHAR(6),
@@ -66,4 +64,3 @@ CREATE TABLE employees (
     FOREIGN KEY (airline_id) REFERENCES airlines (airline_id),
     PRIMARY KEY (employee_id, airline_id)
 );
-*/
