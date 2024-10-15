@@ -16,31 +16,21 @@ CREATE TABLE IF NOT EXISTS employees (
     PRIMARY KEY (employee_id, airline_id)
 );
 */
-
 INSERT INTO employees (employee_id, airline_id, salary, etype, fname, lname, midInit, license_id, plane_id) 
 VALUES
-	('E1', 'UA', 85000, 'Pilot', 'John', 'Doe', 'A', 'LIC001', 'KORD'),
-	('E2', 'AA', 75000, 'Flight Attendant', 'Jane', 'Smith', 'B', 'LIC002', 'KLAX'),
-	('E3', 'DL', 90000, 'Pilot', 'Michael', 'Brown', 'C', 'LIC003', 'KATL'),
-	('E4', 'WN', 55000, 'Flight Attendant', 'Emily', 'Davis', 'D', 'LIC004', 'KDFW'),
-	('E5', 'CO', 80000, 'Flight Attendant', 'David', 'Miller', 'E', 'LIC005', 'KIAH'),
-	('E6', 'NW', 70000, 'Flight Attendant', 'Olivia', 'Wilson', 'F', 'LIC006', 'KDEN'),
-	('E7', 'US', 65000, 'Pilot', 'Liam', 'Moore', 'G', 'LIC007', 'KMIA'),
-	('E8', 'B6', 72000, 'Flight Attendant', 'Sophia', 'Taylor', 'H', 'LIC008', 'KJFK'),
-	('E9', 'ENY', 80000, 'Flight Attendant', 'James', 'Anderson', 'I', 'LIC009', 'KMCO'),
-	('E10', 'MQ', 60000, 'Flight Attendant', 'Isabella', 'Thomas', 'J', 'LIC010', 'KSEA'),
-	('E11', 'OO', 82000, 'Pilot', 'William', 'Jackson', 'K', 'LIC011', 'KAUS'),
-	('E12', 'PI', 78000, 'Flight Attendant', 'Ava', 'White', 'L', 'LIC012', 'KPHX'),
-	('E13', 'XE', 75000, 'Flight Attendant', 'Mason', 'Harris', 'M', 'LIC013', 'KTPA'),
-	('E14', 'NK', 69000, 'Flight Attendant', 'Charlotte', 'Martin', 'N', 'LIC014', 'KORD'),
-	('E15', 'AIO', 100000, 'Pilot', 'Lucas', 'Thompson', 'O', 'LIC015', 'KSEA'),
-	('E16', 'UA', 90000, 'Pilot', 'Amelia', 'Garcia', 'P', 'LIC016', 'KMIA'),
-	('E17', 'AA', 85000, 'Pilot', 'Elijah', 'Martinez', 'Q', 'LIC017', 'KMCO'),
-	('E18', 'DL', 78000, 'Flight Attendant', 'Ethan', 'Rodriguez', 'R', 'LIC018', 'KATL'),
-	('E19', 'WN', 72000, 'Pilot', 'Mia', 'Lee', 'S', 'LIC019', 'KDFW'),
-	('E20', 'CO', 80000, 'Flight Attendant', 'Benjamin', 'Walker', 'T', 'LIC020', 'KIAH'),
-	('E21', 'NW', 70000, 'Flight Attendant', 'Abigail', 'Perez', 'U', 'LIC021', 'KDEN'),
-	('E22', 'US', 65000, 'Pilot', 'Alexander', 'Robinson', 'V', 'LIC022', 'KMIA'),
-	('E23', 'B6', 72000, 'Pilot', 'Ella', 'Clark', 'W', 'LIC023', 'KJFK'),
-	('E24', 'ENY', 85000, 'Pilot', 'Matthew', 'Lewis', 'X', 'LIC024', 'KLAX'),
-	('E25', 'MQ', 60000, 'Flight Attendant', 'Sofia', 'Young', 'Y', 'LIC025', 'KSEA');
+    ('E1', 'UA', 85000, 'Pilot', 'John', 'Doe', 'A', 'LIC001', 'A330-1'),
+    ('E16', 'UA', 90000, 'Pilot', 'Amelia', 'Garcia', 'P', 'LIC016', 'B767-1'),
+    ('E26', 'UA', 60000, 'Flight Attendant', 'Oliver', 'Stone', 'B', NULL, 'B787-1'),
+    ('E2', 'AA', 75000, 'Flight Attendant', 'Jane', 'Smith', 'B', NULL, 'A320-1'),
+    ('E17', 'AA', 85000, 'Pilot', 'Elijah', 'Martinez', 'Q', 'LIC017', 'A330neo-1'),
+    ('E27', 'AA', 65000, 'Flight Attendant', 'Chloe', 'Hall', 'C', NULL, 'B777-1'),
+    ('E3', 'DL', 90000, 'Pilot', 'Michael', 'Brown', 'C', 'LIC003', 'A220-1'),
+    ('E18', 'DL', 78000, 'Flight Attendant', 'Ethan', 'Rodriguez', 'R', NULL, 'A350-1'),
+    ('E28', 'DL', 62000, 'Flight Attendant', 'Lily', 'Evans', 'D', NULL, 'A220-1'),
+    ('E4', 'WN', 55000, 'Flight Attendant', 'Emily', 'Davis', 'D', NULL, 'B737-1'),
+    ('E19', 'WN', 72000, 'Pilot', 'Mia', 'Lee', 'S', 'LIC019', 'B737-1'),
+    ('E8', 'B6', 72000, 'Flight Attendant', 'Sophia', 'Taylor', 'H', NULL, 'EJet-1'),
+    ('E23', 'B6', 72000, 'Pilot', 'Ella', 'Clark', 'W', 'LIC023', 'E2-1'),
+    ('E14', 'NK', 69000, 'Flight Attendant', 'Charlotte', 'Martin', 'N', NULL, 'ARJ21-1'),
+    ('E15', 'AIO', 100000, 'Pilot', 'Lucas', 'Thompson', 'O', 'LIC015', 'An148-1'),
+    ('E29', 'AIO', 95000, 'Pilot', 'Henry', 'Wright', 'F', 'LIC029', 'Il96-1');
