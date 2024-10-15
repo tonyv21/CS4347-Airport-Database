@@ -29,8 +29,8 @@ CREATE TABLE IF NOT EXISTS flights (
     start_time TIMESTAMP,
     end_time TIMESTAMP,
     airplane_id CHAR(10),
-    start_id CHAR(3),
-    end_id CHAR(3),
+    start_id CHAR(4),
+    end_id CHAR(4),
     PRIMARY KEY (flight_id, start_id, end_id)
 );
 
