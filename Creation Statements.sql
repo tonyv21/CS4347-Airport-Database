@@ -12,12 +12,11 @@ CREATE TABLE IF NOT EXISTS airplanes (
     capacity INTEGER CHECK (capacity > 0),
     dry_weight REAL CHECK (dry_weight > 0),
     airline_id CHAR(6),
-    FOREIGN KEY (airline_id) REFERENCES airlines (airline_id),
     PRIMARY KEY (plane_id, plane_type)
 );
 
 CREATE TABLE IF NOT EXISTS airports (
-    airport_id CHAR(4) PRIMARY KEY,
+    airport_id CHAR(3) PRIMARY KEY,
     airport_name VARCHAR(100),
     state CHAR(2),
     city VARCHAR(100),
@@ -32,9 +31,6 @@ CREATE TABLE IF NOT EXISTS flights (
     airplane_id CHAR(10),
     start_id CHAR(3),
     end_id CHAR(3),
-    FOREIGN KEY (airplane_id) REFERENCES airplanes (plane_id),
-    FOREIGN KEY (start_id) REFERENCES airports (airport_id),
-    FOREIGN KEY (end_id) REFERENCES airports (airport_id),
     PRIMARY KEY (flight_id, start_id, end_id)
 );
 
@@ -44,8 +40,7 @@ CREATE TABLE IF NOT EXISTS passengers (
     fname VARCHAR(50),
     lname VARCHAR(50),
     midInit CHAR(1),
-    flight_id VARCHAR(7),
-    FOREIGN KEY (flight_id) REFERENCES flights (flight_id)
+    flight_id VARCHAR(7)
 );
 
 CREATE TABLE IF NOT EXISTS employees (
@@ -58,7 +53,20 @@ CREATE TABLE IF NOT EXISTS employees (
     midInit CHAR(1),
     license_id CHAR(10),
     plane_id CHAR(10),
-    FOREIGN KEY (plane_id) REFERENCES airplanes (plane_id),
-    FOREIGN KEY (airline_id) REFERENCES airlines (airline_id),
     PRIMARY KEY (employee_id, airline_id)
 );
+
+ALTER TABLE airplanes
+ADD CONSTRAINT fk_airline FOREIGN KEY (airline_id) REFERENCES airlines (airline_id);
+
+ALTER TABLE flights
+ADD CONSTRAINT fk_plane FOREIGN KEY (airplane_id) REFERENCES airplanes (plane_id),
+ADD CONSTRAINT fk_start_airport FOREIGN KEY (start_id) REFERENCES airports (airport_id),
+ADD CONSTRAINT fk_end_airport FOREIGN KEY (end_id) REFERENCES airports (airport_id);
+
+ALTER TABLE passengers
+ADD CONSTRAINT fk_flight FOREIGN KEY (flight_id) REFERENCES flights (flight_id);
+
+ALTER TABLE employees
+ADD CONSTRAINT fk_employee_airline FOREIGN KEY (airline_id) REFERENCES airlines (airline_id),
+ADD CONSTRAINT fk_employee_plane FOREIGN KEY (plane_id) REFERENCES airplanes (plane_id);
