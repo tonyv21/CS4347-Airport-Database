@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS airplanes (
 );
 
 CREATE TABLE IF NOT EXISTS airports (
-    airport_id CHAR(3) PRIMARY KEY,
+    airport_id CHAR(4) PRIMARY KEY,
     airport_name VARCHAR(100),
     state CHAR(2),
     city VARCHAR(100),
